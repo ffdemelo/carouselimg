@@ -128,6 +128,7 @@ button img{
     }
 
     .grid-img{
+        display: none;
         height: 100vh;
         width: 133vh;
         grid-template-rows: 1fr 1fr;
