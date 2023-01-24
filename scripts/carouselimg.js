@@ -96,6 +96,8 @@ function updateSizeViewport(){
         buttonBack.style.display = 'flex';
         buttonForward.style.display = 'flex';
         toggleStatus = true;
+    }else{
+        portfolioGrid.style.display = 'none';
     }
 }
 
