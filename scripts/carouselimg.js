@@ -84,6 +84,7 @@ function updateSizeViewport(){
         buttonBack.style.display = 'unset';
         buttonForward.style.display = 'unset';
         portfolioGrid.style.gridTemplateColumns = '1fr 1fr';
+        portfolioGrid.style.gridTemplateRows = '1fr 1fr';
         portfolioGrid.style.display = 'grid';
         portfolioGrid.style.position = 'unset';
         portfolioGrid.style.top ='unset';
