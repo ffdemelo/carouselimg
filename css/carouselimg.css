@@ -1,4 +1,4 @@
-I*{
+*{
     margin: 0;
     padding: 0;
     outline: 0;
@@ -13,7 +13,7 @@ body{
 }
 
 main{
-    height: calc(100vh - 80px);
+    height: calc(100vh - 60px);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -26,7 +26,6 @@ main{
     width: 100vw;
     height: 75vw;
     overflow: scroll;
-    z-index: 0;
 }
 
 .grid-img div{
@@ -59,10 +58,19 @@ button{
 .center-bg-img{
     width: 100vw;
     height: 75vw;
+    background-position: center;
     background-size: cover;
     background-attachment: scroll;
     background-repeat: no-repeat;
-    z-index: -1;
+}
+
+.center-bg-img-original-ratio{
+    width: 100vw;
+    height: 75vw;
+    background-position: center;
+    background-size: contain;
+    background-attachment: scroll;
+    background-repeat: no-repeat;
 }
 
 .div-buttons{
@@ -109,33 +117,33 @@ button img{
         display: none;
     }
     .center-bg-img{
-        height: calc(100vh - 80px);
-        width: calc(133vh - 107px);
+        height: calc(100vh - 60px);
+        width: calc(133vh - 80px);
     }
     
     .div-buttons{
-        height: calc(100vh - 80px); 
+        height: calc(100vh - 60px);
     }
     
     .display{
         display: flex;
     }
     .left{
-        left: calc((50vw - ((133vh-107px)/2) - 40px);
+        left: calc((50vw - (133vh - 80px)/2) - 40px);
     }
     .right{
-        right: calc((50vw - ((133vh-107px)/2) - 40px);
+        right: calc((50vw - (133vh - 80px)/2) - 40px);
     }
 
     .grid-img{
         display: none;
-        height: calc(100vh - 80px);
-        width: calc(133vh - 107px);
+        height: calc(100vh - 60px);
+        width: calc(133vh - 80px);
         grid-template-rows: 1fr 1fr 1fr;
     }
 
     .grid-img div{
-        width: calc((133vh - 107)/3);
-        height: calc((100vh - 80px)/3);
+        width: calc(calc(133vh - 80px)/3);
+        height: calc((100vh - 60px)/3);
     }
 }

@@ -3,6 +3,7 @@ var buttonForward = document.getElementById('button-forward');
 var toggleImg = document.getElementById('toggleimg');
 var portfolioGrid = document.getElementById('portfoliogrid');
 var landscape = document.getElementById('landscape');
+var landscapeToggleStatus = true;
 var toggleStatus = true;
 var currentImgId = 0;
 
@@ -21,6 +22,22 @@ function createElementsForGrid(){
     currentImgId = 0;
     landscape.style.backgroundImage = "url(" + "'assets/imgportfolio/" + portfoliolist[currentImgId] + "')";
 }
+function changeRatio(){
+    if(landscapeToggleStatus){
+        landscapeToggleStatus = false;
+        landscape.classList = 'center-bg-img-original-ratio';
+    }else{
+        landscapeToggleStatus = true;
+        landscape.classList = 'center-bg-img';
+    }
+    if(screen.width <= 480){
+        landscape.style.height = '75vw';
+        landscape.style.width = '100vw';
+    }else{
+        landscape.style.height = 'calc(100vh - 60px)';
+        landscape.style.width = 'calc(133vh - 80px)';
+    }
+}
 
 function changeToGrid(){
     if(toggleStatus){
@@ -31,7 +48,6 @@ function changeToGrid(){
         portfolioGrid.style.position = 'absolute';
         portfolioGrid.style.top = '0px';
         portfolioGrid.style.gridTemplateColumns = 'repeat(' + Math.ceil(portfoliolist.length / 3) + ', 1fr)';
-        portfolioGrid.style.gridTemplateRows = '1fr 1fr 1fr';
         toggleStatus = false;
         
     }
@@ -66,6 +82,7 @@ function clickForward(){
 
 function thumbChangeImg(){
     if(screen.width > 480){
+        toggleImg.innerHTML = '<img src="assets/icons/img-grid.png" alt="">'
         portfolioGrid.style.display = 'none';
     }
     if(toggleStatus){
@@ -85,7 +102,6 @@ function updateSizeViewport(){
         buttonBack.style.display = 'unset';
         buttonForward.style.display = 'unset';
         portfolioGrid.style.gridTemplateColumns = '1fr 1fr';
-        portfolioGrid.style.gridTemplateRows = '1fr 1fr';
         portfolioGrid.style.display = 'grid';
         portfolioGrid.style.position = 'unset';
         portfolioGrid.style.top ='unset';
@@ -94,14 +110,18 @@ function updateSizeViewport(){
         buttonBack.style.display = 'flex';
         buttonForward.style.display = 'flex';
         toggleStatus = true;
+        landscape.style.width = '100vw';
+        landscape.style.height = '75vw';
     }else{
         portfolioGrid.style.display = 'none';
+        landscape.style.height = 'calc(100vh - 60px)';
+        landscape.style.width = 'calc(133vh - 80px)';
     }
 }
 
 createElementsForGrid();
+landscape.onclick = changeRatio;
 toggleImg.onclick = changeToGrid;
 buttonBack.onclick = clickBack;
 buttonForward.onclick = clickForward;
 window.addEventListener('resize', updateSizeViewport);
-
