@@ -80,9 +80,9 @@ function thumbChangeImg(){
 }
 
 function hideAddressBar(){
-   alert('Load window update 2');
+   alert('Load window update -80');
    $('#home').trigger('follow');
-   window.scrollTo( 0, 1 );
+   window.scrollTo( 0, -80);
 }
 
 function updateSizeViewport(){
