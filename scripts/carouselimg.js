@@ -1,4 +1,4 @@
-var buttonBack = document.getElementById('button-back');
+Ivar buttonBack = document.getElementById('button-back');
 var buttonForward = document.getElementById('button-forward');
 var toggleImg = document.getElementById('toggleimg');
 var portfolioGrid = document.getElementById('portfoliogrid');
@@ -79,12 +79,6 @@ function thumbChangeImg(){
     landscape.style.backgroundImage = "url(" + "'assets/imgportfolio/" + portfoliolist[currentImgId] + "')";
 }
 
-function hideAddressBar(){
-   alert('Load window update -80');
-   $('#home').trigger('follow');
-   window.scrollTo( 0, -80);
-}
-
 function updateSizeViewport(){
     if(screen.width <= 480){
         buttonBack.style.display = 'unset';
@@ -108,4 +102,4 @@ toggleImg.onclick = changeToGrid;
 buttonBack.onclick = clickBack;
 buttonForward.onclick = clickForward;
 window.addEventListener('resize', updateSizeViewport);
-window.addEventListener('load', hideAddressBar);
+
