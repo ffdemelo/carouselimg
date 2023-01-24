@@ -79,6 +79,10 @@ function thumbChangeImg(){
     landscape.style.backgroundImage = "url(" + "'assets/imgportfolio/" + portfoliolist[currentImgId] + "')";
 }
 
+function hideAddressBar(){
+   window.scrollTo( 0, 1 );
+}
+
 function updateSizeViewport(){
     if(screen.width <= 480){
         buttonBack.style.display = 'unset';
@@ -100,4 +104,4 @@ toggleImg.onclick = changeToGrid;
 buttonBack.onclick = clickBack;
 buttonForward.onclick = clickForward;
 window.addEventListener('resize', updateSizeViewport);
-
+window.addEventListener('load', hideAddressBar);
