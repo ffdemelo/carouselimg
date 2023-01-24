@@ -27,6 +27,7 @@ function changeToGrid(){
         toggleImg.innerHTML = '<img src="assets/icons/img-landscape.png" alt=""></img>'
         buttonBack.style.display = 'none';
         buttonForward.style.display = 'none';
+        portfolioGrid.style.display = 'grid';
         portfolioGrid.style.position = 'absolute';
         portfolioGrid.style.top = '0px';
         portfolioGrid.style.gridTemplateColumns = 'repeat(' + Math.ceil(portfoliolist.length / 3) + ', 1fr)';
@@ -37,8 +38,7 @@ function changeToGrid(){
         toggleImg.innerHTML = '<img src="assets/icons/img-grid.png" alt="">'
         buttonBack.style.display = 'unset';
         buttonForward.style.display = 'unset';
-        portfolioGrid.style.display = 'grid';
-        portfolioGrid.style.top = '100vh';
+        portfolioGrid.style.display = 'none';
         toggleStatus = true;
     }
 }
@@ -65,7 +65,7 @@ function clickForward(){
 
 function thumbChangeImg(){
     if(screen.width > 480){
-        portfolioGrid.style.top = '100vh';
+        portfolioGrid.style.display = 'none';
     }
     if(toggleStatus){
         toggleStatus = false;
