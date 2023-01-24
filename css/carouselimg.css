@@ -13,7 +13,7 @@ body{
 }
 
 main{
-    height: calc(100vh - 60px);
+    height: calc(100vh - 80px);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -109,28 +109,28 @@ button img{
         display: none;
     }
     .center-bg-img{
-        height: calc(100vh - 60px);
-        width: calc(133vh - 80px);
+        height: calc(100vh - 80px);
+        width: calc(133vh - 107px);
     }
     
     .div-buttons{
-        height: calc(100vh - 60px); 
+        height: calc(100vh - 80px); 
     }
     
     .display{
         display: flex;
     }
     .left{
-        left: calc((50vw - 133vh/2) - 40px);
+        left: calc((50vw - ((133vh-107px)/2) - 40px);
     }
     .right{
-        right: calc((50vw - 133vh/2) - 40px);
+        right: calc((50vw - ((133vh-107px)/2) - 40px);
     }
 
     .grid-img{
         display: none;
-        height: calc(100vh - 60px);
-        width: calc(133vh - 80px);
+        height: calc(100vh - 80px);
+        width: calc(133vh - 107px);
         grid-template-rows: 1fr 1fr 1fr;
     }
 
