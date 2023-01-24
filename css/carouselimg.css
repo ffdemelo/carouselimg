@@ -13,7 +13,7 @@ body{
 }
 
 main{
-    height: calc(100vh - 80px);
+    height: calc(100vh - 60px);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -109,12 +109,12 @@ button img{
         display: none;
     }
     .center-bg-img{
-        height: calc(100vh - 80px);
-        width: calc(133vh - 107px);
+        height: calc(100vh - 60px);
+        width: calc(133vh - 80px);
     }
     
     .div-buttons{
-        height: calc(100vh - 80px); 
+        height: calc(100vh - 60px); 
     }
     
     .display{
@@ -129,8 +129,8 @@ button img{
 
     .grid-img{
         display: none;
-        height: calc(100vh - 80px);
-        width: calc(133vh - 107px);
+        height: calc(100vh - 60px);
+        width: calc(133vh - 80px);
         grid-template-rows: 1fr 1fr;
     }
 
