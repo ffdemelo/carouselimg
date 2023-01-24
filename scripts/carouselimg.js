@@ -1,4 +1,4 @@
-Ivar buttonBack = document.getElementById('button-back');
+var buttonBack = document.getElementById('button-back');
 var buttonForward = document.getElementById('button-forward');
 var toggleImg = document.getElementById('toggleimg');
 var portfolioGrid = document.getElementById('portfoliogrid');
