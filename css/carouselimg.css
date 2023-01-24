@@ -109,12 +109,12 @@ button img{
         display: none;
     }
     .center-bg-img{
-        height: 100vh;
-        width: 133vh;
+        height: calc(100vh - 80px);
+        width: calc(133vh - 107px);
     }
     
     .div-buttons{
-        height: 100vh;
+        height: calc(100vh - 80px); 
     }
     
     .display{
@@ -129,13 +129,13 @@ button img{
 
     .grid-img{
         display: none;
-        height: 100vh;
-        width: 133vh;
+        height: calc(100vh - 80px);
+        width: calc(133vh - 107px);
         grid-template-rows: 1fr 1fr;
     }
 
     .grid-img div{
-        width: calc(133vh/3);
-        height: calc(100vh/3);
+        width: calc((133vh - 107)/3);
+        height: calc((100vh - 80px)/3);
     }
 }
