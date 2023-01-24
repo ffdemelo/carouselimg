@@ -25,7 +25,8 @@ main{
     grid-template-columns: 1fr 1fr;
     width: 100vw;
     height: 75vw;
-    overflow: scroll;
+    overflow-x: hidden;
+    overflow-y: scroll;
 }
 
 .grid-img div{
@@ -140,10 +141,41 @@ button img{
         height: calc(100vh - 60px);
         width: calc(133vh - 80px);
         grid-template-rows: 1fr 1fr 1fr;
+        overflow-y: hidden;
+        overflow-x: scroll;
     }
 
     .grid-img div{
         width: calc(calc(133vh - 80px)/3);
         height: calc((100vh - 60px)/3);
+    }
+}
+
+@media screen and (min-width: 900px){
+    .center-bg-img{
+        width: 100vw;
+        height: 100vh;
+    }
+    .div-buttons {
+        z-index: 1;
+    }
+    .left{
+        left: 60px;
+    }
+    .right{
+        right: 60px;
+    }
+    .grid-img{
+        width: calc(100vw - 120px);
+        height: 150px;
+        grid-template-rows: 150px;
+        overflow-y: hidden;
+        overflow-x: scroll;
+        z-index: 0;
+    }
+
+    .grid-img div{
+        height: 150px;
+        width: 200px;
     }
 }

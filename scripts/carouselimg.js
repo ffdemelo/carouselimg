@@ -37,6 +37,10 @@ function changeRatio(){
         landscape.style.height = 'calc(100vh - 60px)';
         landscape.style.width = 'calc(133vh - 80px)';
     }
+    if(screen.width > 900){
+        landscape.style.height = '100vh';
+        landscape.style.width = '100vw';
+    }
 }
 
 function changeToGrid(){
@@ -57,6 +61,11 @@ function changeToGrid(){
         buttonForward.style.display = 'unset';
         portfolioGrid.style.display = 'none';
         toggleStatus = true;
+    }
+    if(screen.width > 900){
+        portfolioGrid.style.gridTemplateColumns = 'repeat(' + portfoliolist.length + ', 200px)';
+        portfolioGrid.style.gridTemplateRows = '150px';
+        portfolioGrid.style.top = 'calc(100vh - 170px)';
     }
 }
 
@@ -116,6 +125,10 @@ function updateSizeViewport(){
         portfolioGrid.style.display = 'none';
         landscape.style.height = 'calc(100vh - 60px)';
         landscape.style.width = 'calc(133vh - 80px)';
+    }
+    if(screen.width > 900){
+        landscape.style.height = '100vh';
+        landscape.style.width = '100vw';
     }
 }
 
