@@ -31,6 +31,7 @@ function changeToGrid(){
         portfolioGrid.style.position = 'absolute';
         portfolioGrid.style.top = '0px';
         portfolioGrid.style.gridTemplateColumns = 'repeat(' + Math.ceil(portfoliolist.length / 3) + ', 1fr)';
+        portfolioGrid.style.gridTemplateRows = '1fr 1fr 1fr';
         toggleStatus = false;
         
     }
