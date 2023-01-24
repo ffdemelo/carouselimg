@@ -80,7 +80,7 @@ function thumbChangeImg(){
 }
 
 function hideAddressBar(){
-   alert('Load window update');
+   alert('Load window update 2');
    $('#home').trigger('follow');
    window.scrollTo( 0, 1 );
 }
