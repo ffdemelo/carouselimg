@@ -79,6 +79,7 @@ button{
     flex-direction: column;
     width: 40px;
     height: 75vw;
+    mix-blend-mode: difference;
 }
 
 button img{
@@ -119,7 +120,7 @@ button img{
     }
     .center-bg-img{
         height: calc(100vh - 60px);
-        width: calc(133vh - 80px);
+        width: calc(177vh - 107px);
     }
     
     .div-buttons{

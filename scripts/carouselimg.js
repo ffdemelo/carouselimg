@@ -24,22 +24,25 @@ function createElementsForGrid(){
 }
 function changeRatio(){
     if(landscapeToggleStatus){
-        landscapeToggleStatus = false;
-        landscape.classList = 'center-bg-img-original-ratio';
-    }else{
-        landscapeToggleStatus = true;
-        landscape.classList = 'center-bg-img';
+        if(screen.width > 480){
+            landscapeToggleStatus = false;
+            landscape.style.width = 'calc(133vh - 80px';    
+        }
+        if(screen.width > 900){
+            landscapeToggleStatus = false;
+            landscape.style.width = '133vh';
+        }
+
     }
-    if(screen.width <= 480){
-        landscape.style.height = '75vw';
-        landscape.style.width = '100vw';
-    }else{
-        landscape.style.height = 'calc(100vh - 60px)';
-        landscape.style.width = 'calc(133vh - 80px)';
-    }
-    if(screen.width > 900){
-        landscape.style.height = '100vh';
-        landscape.style.width = '100vw';
+    else{
+        if(screen.width > 480){
+            landscapeToggleStatus = true;
+            landscape.style.width = 'calc(177vh - 107px)';    
+        }
+        if(screen.width > 900){
+            landscapeToggleStatus = true;
+            landscape.style.width = '100vw';
+        }
     }
 }
 
@@ -124,7 +127,7 @@ function updateSizeViewport(){
     }else{
         portfolioGrid.style.display = 'none';
         landscape.style.height = 'calc(100vh - 60px)';
-        landscape.style.width = 'calc(133vh - 80px)';
+        landscape.style.width = 'calc(177vh - 107px)';
     }
     if(screen.width > 900){
         landscape.style.height = '100vh';
